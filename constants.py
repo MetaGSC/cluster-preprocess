@@ -1,8 +1,7 @@
 thread_count = 8
 batch_size = 1000
-# frag_len = 5000
-# coverage = 2
 k = 3
+cov_k = 15
 err_file = "error.txt"
 log_file = "log.txt"
 
@@ -11,104 +10,26 @@ plas_bar_desc  = "plasmid      "
 chrom_bar_desc = "chromosome   "
 ex_plas_bar_desc = "extra plasmid"
 
-# Databases
-# plas_db_path = "/media/gayal/Programming/FYP/databases/DNA-ML_FYP_2021/plasmid_refs"
-# chrom_db_path = '/media/gayal/Programming/FYP/databases/DNA-ML_FYP_2021/bacterial_references'
-# plas_db_path = "/media/gayal/Programming/FYP/databases/DNA-ML_FYP_2021/plas-ref-small"
-# chrom_db_path = '/media/gayal/Programming/FYP/databases/DNA-ML_FYP_2021/bact-ref-tiny'
-# db_path = "../../references/biomarkerdbs"
-# cmscan_path = "cmscan"
-# blastn_path = "blastn"
+# tool paths
 seq2vec_path = "seq2vec"
-# nucmer_path = "nucmer"
-
-# # label files 
-# plas_label_path = "results/plasmid/Label"
-# chrom_label_path = "results/chromosome/Label"
-# ex_plas_label_path = "results/extra-plasmid/Label"
-
-# # target csv files
-# plas_target_path = "results/plasmid/target.csv"
-# chrom_target_path = "results/chromosome/target.csv"
-# ex_plas_target_path = "results/extra-plasmid/target.csv"
+dsk_path = "dsk"
+dsk2ascii_path = "dsk2ascii"
 
 # fragment files
 plas_write_path = "/media/gayal/Programming/FYP/code/preprocess/results/plasmid/Data/fragments" 
 chrom_write_path = "/media/gayal/Programming/FYP/code/preprocess/results/chromosome/Data/fragments"
 extra_plasmid_write_path = "/media/gayal/Programming/FYP/code/preprocess/results/extra-plasmid/Data/fragments"
 
-# # fragment txt files
-# plas_txt_write_path = "results/plasmid/extra/frag-txt"
-# chrom_txt_write_path = "results/chromosome/extra/frag-txt"
-# extra_plasmid_txt_write_path = "results/extra-plasmid/extra/frag-txt"
-
 # kmer files
+plas_kmer_write_path = "results/plasmid/Data/kmers"
+chrom_kmer_write_path = "results/chromosome/Data/kmers"
+ex_plas_kmer_write_path = "results/extra-plasmid/Data/kmers"
 
-plas_7mer_write_path = "results/plasmid/Data/7mers"
-chrom_7mer_write_path = "results/chromosome/Data/7mers"
-ex_plas_7mer_write_path = "results/extra-plasmid/Data/7mers"
+# coverage files
+plas_coverage_h5_path = "results/plasmid/extra/h5"
+chrom_coverage_h5_path = "results/chromosome/extra/h5"
+ex_plas_coverage_h5_path = "results/extra-plasmid/extra/h5"
 
-# # circularity files
-# plas_circ_write_path = "results/plasmid/Data/circular"
-# chrom_circ_write_path = "results/chromosome/Data/circular"
-# ex_plas_circ_write_path = "results/extra-plasmid/Data/circular"
-
-# plas_circ_out_path = "results/plasmid/extra/nucmer_out"
-# chrom_circ_out_path = "results/chromosome/extra/nucmer_out"
-# ex_plas_circ_out_path = "results/extra-plasmid/extra/nucmer_out"
-
-# plas_frag_split_path = "results/plasmid/extra/split"
-# chrom_frag_split_path = "results/chromosome/extra/split"
-# ex_plas_frag_split_path = "results/extra-plasmid/extra/split"
-
-# # inc factor files
-# plas_inc_out_path = "results/plasmid/extra/inc-out"
-# chrom_inc_out_path = "results/chromosome/extra/inc-out"
-# ex_plas_inc_out_path = "results/extra-plasmid/extra/inc-out"
-
-# plas_inc_write_path = "results/plasmid/Data/inc-fac"
-# chrom_inc_write_path = "results/chromosome/Data/inc-fac"
-# ex_plas_inc_write_path = "results/extra-plasmid/Data/inc-fac"
-
-# # rrna files
-# plas_rrna_write_path = "results/plasmid/Data/rrna"
-# chrom_rrna_write_path = "results/chromosome/Data/rrna"
-# ex_plas_rrna_write_path = "results/extra-plasmid/Data/rrna"
-
-# plas_rrna_out_path = "results/plasmid/extra/rrna-out"
-# chrom_rrna_out_path = "results/chromosome/extra/rrna-out"
-# ex_plas_rrna_out_path = "results/extra-plasmid/extra/rrna-out"
-
-# # orit files
-# plas_orit_out_path = "results/plasmid/extra/orit-out"
-# chrom_orit_out_path = "results/chromosome/extra/orit-out"
-# ex_plas_orit_out_path = "results/extra-plasmid/extra/orit-out"
-
-# plas_orit_write_path = "results/plasmid/Data/orit"
-# chrom_orit_write_path = "results/chromosome/Data/orit"
-# ex_plas_orit_write_path = "results/extra-plasmid/Data/orit"
-
-# # mobilization, conjugation, replication files
-# plas_mob_out_path = "results/plasmid/extra/mob-out" 
-# chrom_mob_out_path = "results/chromosome/extra/mob-out" 
-# ex_plas_mob_out_path = "results/extra-plasmid/extra/mob-out" 
-
-# plas_rep_out_path = "results/plasmid/extra/rep-out" 
-# chrom_rep_out_path = "results/chromosome/extra/rep-out" 
-# ex_plas_rep_out_path = "results/extra-plasmid/extra/rep-out" 
-
-# plas_con_out_path = "results/plasmid/extra/con-out" 
-# chrom_con_out_path = "results/chromosome/extra/con-out" 
-# ex_plas_con_out_path = "results/extra-plasmid/extra/con-out" 
-
-# plas_mob_write_path = "results/plasmid/Data/mobilization" 
-# chrom_mob_write_path = "results/chromosome/Data/mobilization"
-# ex_plas_mob_write_path = "results/extra-plasmid/Data/mobilization" 
-
-# plas_rep_write_path = "results/plasmid/Data/replication" 
-# chrom_rep_write_path = "results/chromosome/Data/replication"
-# ex_plas_rep_write_path = "results/extra-plasmid/Data/replication" 
-
-# plas_con_write_path = "results/plasmid/Data/conjugation" 
-# chrom_con_write_path = "results/chromosome/Data/conjugation"
-# ex_plas_con_write_path = "results/extra-plasmid/Data/conjugation" 
+plas_coverage_write_path = "results/plasmid/Data/coverage"
+chrom_coverage_write_path = "results/chromosome/Data/coverage"
+ex_plas_coverage_write_path = "results/extra-plasmid/Data/coverage"

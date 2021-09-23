@@ -1,2 +1,4 @@
-/results/*
+/results
 __pycache__
+error.txt
+log.txt

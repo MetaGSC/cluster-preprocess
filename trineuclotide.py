@@ -30,6 +30,6 @@ def count_kmers(k, frag_path, write_path, pb_desc):
 
 if __name__ == "__main__":
     create_kmer_files()
-    count_kmers(k, plas_write_path, plas_7mer_write_path, plas_bar_desc)
-    count_kmers(k, chrom_write_path, chrom_7mer_write_path, chrom_bar_desc)
-    count_kmers(k, extra_plasmid_write_path, ex_plas_7mer_write_path, ex_plas_bar_desc)
+    count_kmers(k, plas_write_path, plas_kmer_write_path, plas_bar_desc)
+    count_kmers(k, chrom_write_path, chrom_kmer_write_path, chrom_bar_desc)
+    count_kmers(k, extra_plasmid_write_path, ex_plas_kmer_write_path, ex_plas_bar_desc)
